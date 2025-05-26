@@ -20,6 +20,13 @@ STATIC_URL = '/static/'
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+import dj_database_url
+
+DATABASES = {
+    'default': dj_database_url.config(default=os.environ.get('postgresql://serverdb_71mk_user:KCfHZItORvZAvjuqccaGRHbacGq52IGw@dpg-d0pv0gbe5dus73e7mq2g-a/serverdb_71mk'))
+}
+
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
