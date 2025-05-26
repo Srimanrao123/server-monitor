@@ -5,7 +5,7 @@ function Server_list() {
 
     useEffect(() => {
         async function serverlist() {
-            const res = await fetch("http://127.0.0.1:8000/servers")
+            const res = await fetch("https://server-monitor-ve3i.onrender.com/servers")
             const data1 = await res.json()
             setData(data1)
         }

@@ -5,7 +5,7 @@ function Cpu() {
     const [cpu, Setcpu] = useState(0)
     useEffect(() => {
         async function fetchCpu() {
-            const res = await fetch("http://127.0.0.1:8000/server/1/usage")
+            const res = await fetch("https://server-monitor-ve3i.onrender.com/server/1/usage")
             const data = await res.json()
             const cpu_percent = data["cpu_usage_percent"]
             Setcpu(parseInt(cpu_percent))

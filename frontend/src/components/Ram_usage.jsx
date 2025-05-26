@@ -8,7 +8,7 @@ function Ram_usage() {
 
   useEffect(() => {
     async function fetchData() {
-      const res = await fetch(`http://127.0.0.1:8000/ram_usage/1`)
+      const res = await fetch(`https://server-monitor-ve3i.onrender.com/ram_usage/1`)
       const json = await res.json()
 
       setData(json)
